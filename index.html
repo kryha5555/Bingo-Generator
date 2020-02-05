@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bingo Board Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div id="interface">
+        <span id="title">
+            <strong>BINGO</strong><br>
+            WEB GENERATOR
+        </span>
+        <div id="drop-area">
+            <form id="file-form">
+                <input id="file-field" type="file" accept="text/*">
+                <label id="file-button" for="file-field">Drag-and-drop a file or click here to upload!</label>
+            </form>
+            <form id="url-form">
+                <label id="url-desc" for="url-field">... or enter a URL here:</label>
+                <input id="url-field" type="text">
+            </form>
+        </div>
+        <div id="page-count-area">
+            <input id="pages" type="number" value="1" min="1"><br>
+            <label id="pages-desc" for="pages">PAGES</label>
+        </div>
+    </div>
+    <div id="preview"></div>
+    <div id="print"></div>
+</body>
+
+</html>

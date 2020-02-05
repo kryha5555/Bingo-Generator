@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+@page {
+  margin: 0.5cm;
+}
+
+/* user interface layout */
+#interface {
+  position: fixed;
+  z-index: 10;
+  box-sizing: border-box;
+  width: 100%;
+  height: 70px;
+  margin: 0;
+  background-color: #428fd3;
+  box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
+  display: grid;
+  grid-template-columns: 180px auto 70px;
+  grid-template-rows: auto;
+  font-family: sans-serif;
+  color: white;
+}
+
+/* title layout */
+#title {
+  text-align: center;
+  font-size: 15px;
+}
+
+#title strong {
+  font-size: 41px;
+}
+
+/* upload box layout */
+#drop-area {
+  height: 60px;
+  margin: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+  border: 2px dashed lightgray;
+  text-align: center;
+  overflow: hidden;
+}
+
+#drop-area.highlight {
+  border-style: solid;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#drop-area #file-field {
+  display: none;
+}
+
+#drop-area #file-button {
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#drop-area #url-desc {
+  font-size: 14px;
+}
+
+#drop-area #url-field {
+  border: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 1px 1px inset;
+  color: white;
+  padding: 1px;
+}
+
+/* page count box layout */
+#page-count-area {
+  text-align: center;
+  height: 60px;
+  margin: 5px;
+  box-sizing: border-box;
+  padding: 0.5em 0;
+  overflow: hidden;
+}
+
+#page-count-area #pages-desc {
+  font-size: 14px;
+}
+
+#page-count-area #pages {
+  width: 100%;
+  border: none;
+  color: white;
+  padding-right: 1px;
+  text-align: right;
+  font-size: 26px;
+  font-weight: bold;
+  background-color: transparent;
+}
