@@ -21,7 +21,7 @@ body {
   width: 100%;
   height: 70px;
   margin: 0;
-  background-color: #428fd3;
+  background-color: #01cdfe;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
   display: grid;
   grid-template-columns: 180px auto 70px;
@@ -101,4 +101,41 @@ body {
   font-size: 26px;
   font-weight: bold;
   background-color: transparent;
+}
+
+/* preview layout */
+#preview {
+  position: absolute;
+  font: 13px sans-serif;
+  width: 600px;
+  height: 600px;
+  margin: 90px 20px 20px;
+}
+
+/* board layout */
+.board {
+  display: table;
+  table-layout: fixed;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  font: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.board .row {
+  display: table-row;
+  font: inherit;
+}
+
+.board .row .cell {
+  display: table-cell;
+  box-sizing: border-box;
+  padding: 1pt;
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  font: inherit;
+  border: 1px solid black;
+  vertical-align: middle;
 }
