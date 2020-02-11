@@ -105,11 +105,33 @@ body {
 
 /* preview layout */
 #preview {
-  position: absolute;
   font: 13px sans-serif;
   width: 600px;
   height: 600px;
-  margin: 90px 20px 20px;
+  margin: 0 auto;
+  padding-top: 90px;
+}
+
+/* print layouts */
+.page {
+  width: 100%;
+  font: 10pt sans-serif;
+  display: grid;
+  justify-content: space-evenly;
+  page-break-after: always;
+}
+
+.page.narrow {
+  font-size: 7px;
+  font-stretch: ultra-condensed;
+}
+
+.page .entry {
+  margin: 2mm auto;
+  font: inherit;
+  width: 19cm;
+  height: 19cm;
+  box-sizing: border-box;
 }
 
 /* board layout */
@@ -138,4 +160,17 @@ body {
   font: inherit;
   border: 1px solid black;
   vertical-align: middle;
+}
+
+@media screen {
+  #print {
+    display: none;
+  }
+}
+
+@media print {
+  #preview,
+  #interface {
+    display: none;
+  }
 }
