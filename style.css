@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0; /* outer space */
+  padding: 0; /* inner space */
 }
 
 html,
@@ -15,15 +15,15 @@ body {
 
 /* user interface layout */
 #interface {
-  position: fixed;
+  position: fixed; /* relative to the browser window */
   z-index: 10;
-  box-sizing: border-box;
+  box-sizing: border-box; /* w and h includes padding and border */
   width: 100%;
   height: 70px;
   margin: 0;
   background-color: #01cdfe;
   box-shadow: 0 1px 1px 1px rgba(0, 0, 0, 0.3);
-  display: grid;
+  display: grid; /* displays an element as a block-level grid container */
   grid-template-columns: 180px auto 70px;
   grid-template-rows: auto;
   font-family: sans-serif;
@@ -84,7 +84,7 @@ body {
   height: 60px;
   margin: 5px;
   box-sizing: border-box;
-  padding: 0.5em 0;
+  padding: 0.5em 0; /* em is realtive to the font size */
   overflow: hidden;
 }
 
@@ -115,14 +115,14 @@ body {
 /* print layouts */
 .page {
   width: 100%;
-  font: 10pt sans-serif;
+  font: 14pt sans-serif;
   display: grid;
   justify-content: space-evenly;
   page-break-after: always;
 }
 
 .page.narrow {
-  font-size: 7px;
+  font-size: 10px;
   font-stretch: ultra-condensed;
 }
 
@@ -137,8 +137,8 @@ body {
 /* board layout */
 .board {
   display: table;
-  table-layout: fixed;
-  border-collapse: collapse;
+  table-layout: fixed; /* divide evenly */
+  border-collapse: collapse; /* borders are collapsed into a single border when possible */
   box-sizing: border-box;
   font: inherit;
   width: 100%;
@@ -146,12 +146,12 @@ body {
 }
 
 .board .row {
-  display: table-row;
+  display: table-row; /* behave like a <tr> element */
   font: inherit;
 }
 
 .board .row .cell {
-  display: table-cell;
+  display: table-cell; /* behave like a <td> element */
   box-sizing: border-box;
   padding: 1pt;
   width: 20%;
